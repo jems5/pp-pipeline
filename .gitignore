@@ -1,0 +1,7 @@
+.env
+config.ini
+query_generation_4o_mini.ipynb
+pp-pipeline/
+__pycache__/
+*.pyc
+*.json

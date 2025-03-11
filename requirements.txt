@@ -1,0 +1,11 @@
+tweepy
+twikit
+fastapi
+uvicorn
+pydantic
+sqlalchemy
+sqlalchemy.orm
+pandas
+langchain_core
+langchain_community
+langchain_openai
