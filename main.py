@@ -1,5 +1,6 @@
 from fastapi import FastAPI
-from tweets import generate_tweets  # Import the router from tweets.py
+from tweets import generate_tweets
+from typing import Optional
 
 app = FastAPI()
 
@@ -8,4 +9,8 @@ app.include_router(generate_tweets)
 
 @app.get("/")
 def main():
-    return {"hello world"}
+    return {"message": "Welcome to the Tweet Generation API"}
+
+@app.get("/tweets")
+async def get_tweets(industry: str, brands: Optional[str] = None):
+    return await generate_tweets.fetch_and_return_tweets(industry, brands)
